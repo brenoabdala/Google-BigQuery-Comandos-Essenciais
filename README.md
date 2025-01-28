@@ -31,3 +31,28 @@
 
 > SELECT * FROM `github-449213.githubbasedeteste.clientes-teste`;<br>
 > SELECT * FROM `github-449213.githubbasedeteste.clientes-teste` where Genero = 'Masculino';
+
+### SUBQUERY 
+
+<p> A seguir de dois exemplos de utilização de subquery no BigQuery </p>
+
+<strong> subquery </strong>
+
+<strong> APLICANDO WITH </strong>
+
+> WITH CLIENTES AS
+(
+    SELECT 
+        id AS `ID`, 
+        TRIM(NomeCompleto) AS `NOMECOMPLETO`, 
+        TRIM(Genero) AS `GENERO`, 
+        TRIM(telefone) AS `TELEFONE_USUARIO`, 
+        CURRENT_DATETIME() AS `DATA_DE_CRIACAO`, 
+        LEFT(TRIM(Genero), 1) AS `GENERO_USUARIO`
+    FROM `github-449213.githubbasedeteste.clientes-teste`
+) <br>
+SELECT *
+FROM CLIENTES WHERE GENERO_USUARIO = 'M';
+
+<p> Adicionado ao repositório exemplo de código </p>
+
