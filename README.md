@@ -22,4 +22,12 @@
 
 ### COMANDO INSERT - Populando a tabela Clientes
 
-> 
+<p>Arquivo anexado no repositório com a 100 registros de testes, a seguir vou deixar um exemplo:</p>
+
+> INSERT INTO `github-449213.githubbasedeteste.clientes-teste` (id, NomeCompleto, Genero, telefone) VALUES
+(1001, 'João Silva', 'Masculino', '11987654321')
+
+### COMANDO SELECT - Consutando registros
+
+> SELECT * FROM `github-449213.githubbasedeteste.clientes-teste`;
+> SELECT * FROM `github-449213.githubbasedeteste.clientes-teste` where Genero = 'Masculino';
