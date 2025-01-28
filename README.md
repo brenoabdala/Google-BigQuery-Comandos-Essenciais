@@ -19,3 +19,7 @@
 - Armazenamento separado do processamento: Oferece flexibilidade e eficiência de custos.
  
 <hr>
+
+### COMANDO INSERT - Populando a tabela Clientes
+
+> 
