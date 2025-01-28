@@ -1,0 +1,29 @@
+-- WITH 
+
+WITH CLIENTES AS
+(
+    SELECT 
+        id AS `ID`, 
+        TRIM(NomeCompleto) AS `NOMECOMPLETO`, 
+        TRIM(Genero) AS `GENERO`, 
+        TRIM(telefone) AS `TELEFONE_USUARIO`, 
+        CURRENT_DATETIME() AS `DATA_DE_CRIACAO`, 
+        LEFT(TRIM(Genero), 1) AS `GENERO_USUARIO`
+    FROM `github-449213.githubbasedeteste.clientes-teste`
+)
+SELECT *
+FROM CLIENTES WHERE GENERO_USUARIO = 'M';
+
+
+-- SUBQUERY
+SELECT ID_CLIENTE,NOMECOMPLETOCLIENTE,TELEFONE_CLIENTE,GENERO_CLIENTE_ABREVIADO AS `GENERO`,CREATEAT FROM ( 
+
+    SELECT 
+        id AS `ID_CLIENTE`, 
+        TRIM(NomeCompleto) AS `NOMECOMPLETOCLIENTE`, 
+        TRIM(Genero) AS `GENERO`, 
+        TRIM(telefone) AS `TELEFONE_CLIENTE`, 
+        CURRENT_DATETIME() AS `CREATEAT`, 
+        LEFT(TRIM(Genero), 1) AS `GENERO_CLIENTE_ABREVIADO`
+    FROM `github-449213.githubbasedeteste.clientes-teste` WHERE UPPER(TRIM(Genero)) = 'FEMININO'
+)
