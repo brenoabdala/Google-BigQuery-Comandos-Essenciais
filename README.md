@@ -1,0 +1,1 @@
+# Google-BigQuery-Comandos-Essenciais
