@@ -29,5 +29,5 @@
 
 ### COMANDO SELECT - Consutando registros
 
-> SELECT * FROM `github-449213.githubbasedeteste.clientes-teste`;
+> SELECT * FROM `github-449213.githubbasedeteste.clientes-teste`;<br>
 > SELECT * FROM `github-449213.githubbasedeteste.clientes-teste` where Genero = 'Masculino';
