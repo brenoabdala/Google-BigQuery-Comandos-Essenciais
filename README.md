@@ -1,4 +1,4 @@
-# Google BigQuery - Comandos Essenciais para utilização diária
+# Google BigQuery - Comandos essenciais para utilização diária
 
 <p>Este repositórtio tem como objetivo, mostrar os comandos essencias para utilização diária do BigQuery.</p>
 <p>O repositório está dando continuídade ao projeto do repositório (https://github.com/brenoabdala/Google-BigQuery-Configuracao-Inicial.git)</p>
