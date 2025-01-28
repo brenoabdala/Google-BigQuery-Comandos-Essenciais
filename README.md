@@ -36,7 +36,18 @@
 
 <p> A seguir de dois exemplos de utilização de subquery no BigQuery </p>
 
-<strong> subquery </strong>
+<strong> SUBQUERY </strong>
+
+> SELECT ID_CLIENTE,NOMECOMPLETOCLIENTE,TELEFONE_CLIENTE,GENERO_CLIENTE_ABREVIADO AS `GENERO`,CREATEAT FROM ( 
+    SELECT 
+        id AS `ID_CLIENTE`, 
+        TRIM(NomeCompleto) AS `NOMECOMPLETOCLIENTE`, 
+        TRIM(Genero) AS `GENERO`, 
+        TRIM(telefone) AS `TELEFONE_CLIENTE`, 
+        CURRENT_DATETIME() AS `CREATEAT`, 
+        LEFT(TRIM(Genero), 1) AS `GENERO_CLIENTE_ABREVIADO`
+    FROM `github-449213.githubbasedeteste.clientes-teste` WHERE UPPER(TRIM(Genero)) = 'FEMININO'
+)
 
 <strong> APLICANDO WITH </strong>
 
