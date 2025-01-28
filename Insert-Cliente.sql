@@ -1,4 +1,4 @@
-INSERT INTO `github-449213.githubbasedeteste.clientes-teste` (id, nome, sexo, telefone) VALUES
+INSERT INTO `github-449213.githubbasedeteste.clientes-teste` (id, NomeCompleto, Genero, telefone) VALUES
 (1001, 'João Silva', 'Masculino', '11987654321'),
 (1002, 'Maria Oliveira', 'Feminino', '11987654322'),
 (1003, 'Carlos Souza', 'Masculino', '11987654323'),
